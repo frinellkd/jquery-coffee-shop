@@ -16,7 +16,8 @@
         <h1>Coffee Shop</h1>
         <br>
 
-        <img id="coffee_image" src="FIXME" alt="make this image work" height="300" width="200">
+        <img id="coffee_image" src='static/coffee_beans.jpg' alt="make this image work" height="300" width="200">
+        
 
         <h3 id="message">Click The Image To Order Coffee</h3>
 
@@ -45,14 +46,11 @@
 
 
 
-
-
-
 <script src="https://code.jquery.com/jquery.js"></script>
 
 <script>
 
-    var myImage = $('#coffee_image').attr('src', "static/coffee_beans.jpg");
+    
     var myRevenueMessage = document.getElementById("revenue");
 
     var drinksOrdered = [];
@@ -68,20 +66,25 @@
 
         var myRevenue = revenue();
         $('#revenue').html("Today's revenues: " + myRevenue);
-
-       
+        
+        $('#coffee_image').fadeIn();   
         $('#coffee_image').attr("src", "static/coffee_machine.jpg");
+        $('#coffee_image').fadeOut();
         setTimeout(function (){
             $('#coffee_image').attr("src", "static/coffee_mug.jpg")
             }, 
             1000);
+            ;$('#coffee_image').fadeIn()
+            $('#coffee_image').fadeOut();
         setTimeout(
             function (){
                 $('#coffee_image').attr("src", "static/coffee_beans.jpg")
             }, 
             2500);
+            $('#coffee_image').fadeIn()
+
  
-        }
+    }
     
 
    
