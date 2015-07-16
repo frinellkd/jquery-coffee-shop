@@ -46,15 +46,20 @@
 <script>
 
     $('#coffee_image').attr("src", "static/coffee_beans.jpg");
+    
     $("#coffee_image").on('click', makeCoffee);
 
-    
     function makeCoffee(){
        $('#coffee_image').attr("src", "static/coffee_machine.jpg");
-        setTimeout(function(){
-            $('#coffee_image').attr("src", "static/coffee_mug.jpg")}, 1000);
-        setTimeout(function(){
-            $('#coffee_image').attr("src", "static/coffee_beans.jpg")}, 2500);
+        setTimeout(function (){
+            $('#coffee_image').attr("src", "static/coffee_mug.jpg")
+            }, 
+            1000);
+        setTimeout(
+            function (){
+                $('#coffee_image').attr("src", "static/coffee_beans.jpg")
+            }, 
+            2500);
  
     }
 
